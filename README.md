@@ -37,12 +37,6 @@ WHEN I choose to update an employee role
 THEN I am prompted to select an employee to update and their new role and this information is updated in the database 
 ```
 
-## Mock-Up
-
-The following video shows an example of the application being used from the command line:
-
-https://youtu.be/9liyQCx_hjk
-
 ## Getting Started
 The link above shows an tutorial on the upcoming instructions.
 Start the application by opening integrated terminal on Hw12SQL. This will open the command line and direct you to pick a case. Follow through the cases and input and update employee information. Exit When you're done.
