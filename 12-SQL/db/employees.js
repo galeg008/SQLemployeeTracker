@@ -67,8 +67,9 @@ async function addEmployee() {
                 }),
             },
         ]);
+        console.log(firstName,lastName,roleId,managerId,departmentId)
         await db.query(
-            `INSERT INTO employees (firstName, lastName, roleId, managerId, departmentId) VALUES ("${firstName}", "${lastName}", "${roleId}", "${managerId}", "${departmentId}"))`,
+            `INSERT INTO employee (first_name, last_name, role_id, manager_id, department_id) VALUES ("${firstName}", "${lastName}", "${roleId}", "${managerId}", "${departmentId}")`,
         );
         const newEmployee = await viewAllEmployees();
 
@@ -108,7 +109,7 @@ async function updateEmployeeRole() {
                 }),
             },
         ]);
-        await db.query(`UPDATE employees SET role_id = ${roleId} WHERE id = ${employeeId}`);
+        await db.query(`UPDATE employee SET role_id = ${roleId} WHERE id = ${employeeId}`);
         const updatedEmployee = await viewAllEmployees();
         return updatedEmployee;
     } catch (err) {
